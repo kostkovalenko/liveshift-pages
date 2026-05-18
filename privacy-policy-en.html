@@ -6,142 +6,145 @@
   <title>LiveShift Privacy Policy</title>
   <style>
     :root {
-      color-scheme: light;
+      color-scheme: light dark;
       --bg: #f5f5f7;
       --card: #ffffff;
       --text: #111111;
-      --muted: #6e6e73;
-      --border: #e5e5ea;
+      --secondary: #5f6368;
+      --border: #d9d9de;
       --accent: #0a84ff;
     }
-    * { box-sizing: border-box; }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #000000;
+        --card: #1c1c1e;
+        --text: #f5f5f7;
+        --secondary: #a1a1a6;
+        --border: #2c2c2e;
+      }
+    }
+
     body {
       margin: 0;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       background: var(--bg);
       color: var(--text);
-      line-height: 1.6;
+      line-height: 1.55;
     }
-    .wrap {
-      max-width: 860px;
+
+    main {
+      max-width: 760px;
       margin: 0 auto;
-      padding: 32px 20px 64px;
+      padding: 48px 20px 72px;
     }
+
     .card {
       background: var(--card);
       border: 1px solid var(--border);
-      border-radius: 16px;
+      border-radius: 20px;
       padding: 28px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+      box-shadow: 0 12px 36px rgba(0, 0, 0, 0.06);
     }
-    h1 { font-size: 36px; line-height: 1.1; margin: 0 0 12px; }
-    h2 { font-size: 22px; margin: 28px 0 10px; }
-    p, li { font-size: 16px; }
-    .muted { color: var(--muted); }
-    a { color: var(--accent); }
-    ul { padding-left: 22px; }
-    .topbar {
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-      margin-bottom: 18px;
+
+    h1 {
+      margin: 0 0 8px;
+      font-size: 36px;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
     }
-    .chip {
-      text-decoration: none;
-      color: var(--text);
-      background: #f2f2f7;
-      border: 1px solid var(--border);
-      border-radius: 999px;
-      padding: 10px 14px;
-      font-weight: 600;
-      font-size: 14px;
+
+    h2 {
+      margin: 28px 0 10px;
+      font-size: 20px;
+    }
+
+    p, li {
+      font-size: 16px;
+    }
+
+    .updated {
+      color: var(--secondary);
+      margin-top: 0;
+    }
+
+    a {
+      color: var(--accent);
+    }
+
+    ul {
+      padding-left: 22px;
     }
   </style>
 </head>
 <body>
-  <main class="wrap">
-    <div class="topbar">
-      <a class="chip" href="./index.html">Home</a>
-      <a class="chip" href="./privacy-policy-uk.html">Українська версія</a>
-    </div>
-
-    <article class="card">
+  <main>
+    <div class="card">
       <h1>Privacy Policy</h1>
-      <p class="muted">Effective date: April 21, 2026</p>
+      <p class="updated">Last updated: May 18, 2026</p>
 
-      <p>
-        LiveShift (“the app”) is designed to help users track work shifts, working time, breaks, earnings, and related notifications.
-        This Privacy Policy explains what information the app may access, how that information is used, and what control you have over it.
-      </p>
+      <p>LiveShift helps users track work shifts, lunch breaks, earnings, scheduled shifts, and related work statistics. This Privacy Policy explains what information the app uses and how it is handled.</p>
 
-      <h2>Information We Access</h2>
+      <h2>Information You Enter in the App</h2>
+      <p>LiveShift may store the information you choose to enter, including:</p>
       <ul>
-        <li><strong>Calendar data</strong> — only if you grant access, to detect work shifts from the calendar you select.</li>
-        <li><strong>Notifications permission</strong> — to send local notifications and Live Activity updates related to shifts and breaks.</li>
-        <li><strong>App settings and shift history</strong> — stored locally on your device so the app can function properly.</li>
-        <li><strong>Device information</strong> — limited device and system version details may be included in feedback emails or server logs for diagnostics.</li>
+        <li>hourly wage, currency, and extra pay settings;</li>
+        <li>shift start and end times;</li>
+        <li>lunch duration and lunch settings;</li>
+        <li>scheduled shifts, shift templates, and shift history;</li>
+        <li>calendar selection and calendar event identifiers used for app functionality.</li>
       </ul>
+      <p>This information is used to calculate earnings, show shift history, create scheduled shifts, and display Live Activities.</p>
 
-      <h2>How We Use Information</h2>
+      <h2>Calendar Access</h2>
+      <p>If you allow calendar access, LiveShift uses your selected work calendar to detect or create work shifts. Scheduled shifts created in LiveShift may be added to the selected system calendar. Calendar data is used only for app functionality.</p>
+
+      <h2>Live Activities and Server Updates</h2>
+      <p>LiveShift may communicate with the LiveShift server to update Live Activities on the Lock Screen and Dynamic Island. The server may receive technical information needed to deliver these updates, such as:</p>
       <ul>
-        <li>To show your current shift state, worked time, breaks, and earnings.</li>
-        <li>To detect upcoming shifts from your selected work calendar.</li>
-        <li>To deliver local notifications and Live Activities.</li>
-        <li>To support premium features such as faster Live Activity updates.</li>
-        <li>To help diagnose technical issues if you contact support or send feedback.</li>
+        <li>Live Activity identifiers and push tokens;</li>
+        <li>current shift status, start time, worked duration, lunch state, and calculated earnings;</li>
+        <li>currency code, hourly rate, and selected bonus settings needed for calculation;</li>
+        <li>device model, operating system version, app version, and locale for debugging and compatibility.</li>
       </ul>
+      <p>This data is used only to provide Live Activity updates and troubleshoot app behavior.</p>
+
+      <h2>Purchases and Subscriptions</h2>
+      <p>LiveShift uses RevenueCat to manage Premium subscriptions and purchase status. RevenueCat may process purchase-related information such as subscription status, product identifiers, transaction identifiers, app user identifiers, country or region, and device/app information needed to validate and restore purchases.</p>
+      <p>LiveShift uses this information to unlock Premium features, restore purchases, prevent purchase errors, and understand subscription status. LiveShift does not sell your personal information.</p>
+      <p>You can learn more about RevenueCat’s privacy practices at <a href="https://www.revenuecat.com/privacy/">RevenueCat Privacy Policy</a>.</p>
+
+      <h2>Notifications</h2>
+      <p>LiveShift can schedule local notifications for shift and lunch reminders if you enable them. Notification settings are stored on your device. Live Activity server updates may also use Apple Push Notification service to update active Live Activities.</p>
+
+      <h2>Feedback Email</h2>
+      <p>If you send feedback from the app, the email may include technical diagnostics such as app version, build number, iOS version, device model, device identifier, and locale. This helps us understand and fix issues.</p>
 
       <h2>Data Storage</h2>
-      <p>
-        Shift history, settings, and active session data are primarily stored on your device. If server-backed Live Activity updates are enabled,
-        limited shift-related metadata may be sent to the LiveShift server so remote updates can be delivered.
-      </p>
+      <p>Most app data is stored locally on your device. Some technical Live Activity and subscription-related data may be processed by the LiveShift server, Apple, and RevenueCat as needed to provide app functionality.</p>
 
-      <h2>Server Data</h2>
-      <p>
-        When server-backed Live Activity updates are active, the service may process limited data such as:
-      </p>
+      <h2>Third-Party Services</h2>
+      <p>LiveShift may use the following services:</p>
       <ul>
-        <li>shift title, start time, wage, and current state,</li>
-        <li>whether lunch is active,</li>
-        <li>device model and system version,</li>
-        <li>Live Activity identifiers and push-related tokens.</li>
+        <li>Apple services, including StoreKit, EventKit, local notifications, and Apple Push Notification service;</li>
+        <li>RevenueCat for subscription management and purchase validation;</li>
+        <li>LiveShift server infrastructure for Live Activity update delivery.</li>
       </ul>
-      <p>
-        This information is used only to operate Live Activity delivery and related diagnostics.
-      </p>
 
       <h2>Data Sharing</h2>
-      <p>
-        We do not sell personal data. Information is not shared with third parties except as needed to operate Apple platform features,
-        such as notifications, in-app purchases, and Live Activities.
-      </p>
-
-      <h2>Your Choices</h2>
-      <ul>
-        <li>You can deny or revoke calendar access in iOS Settings.</li>
-        <li>You can deny or revoke notification access in iOS Settings.</li>
-        <li>You can delete the app to remove locally stored app data from the device.</li>
-      </ul>
+      <p>We do not sell your personal information. We share data only when needed to provide app functionality, process purchases, comply with legal requirements, or protect the app and users.</p>
 
       <h2>Children’s Privacy</h2>
-      <p>
-        LiveShift is not directed to children under 13 and does not knowingly collect personal information from children.
-      </p>
+      <p>LiveShift is not directed to children under 13. We do not knowingly collect personal information from children under 13.</p>
+
+      <h2>Your Choices</h2>
+      <p>You can control app permissions in iOS Settings, including calendar and notification access. You can manage or cancel subscriptions through your Apple ID subscription settings.</p>
 
       <h2>Contact</h2>
-      <p>
-        If you have questions about this Privacy Policy, you can contact support through the support page linked from the App Store listing.
-      </p>
+      <p>If you have questions about this Privacy Policy, contact us at <a href="mailto:kostkovalenko2@gmail.com">kostkovalenko2@gmail.com</a>.</p>
 
-      <h2>Terms of Use</h2>
-      <p>
-        Standard Apple Terms of Use (EULA):
-        <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">
-          https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
-        </a>
-      </p>
-    </article>
+      <p><a href="index.html">Back to LiveShift</a></p>
+    </div>
   </main>
 </body>
 </html>
